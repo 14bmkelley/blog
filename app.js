@@ -19,14 +19,7 @@ let controllers = require('./controllers/index.js');
 
 // Connect to firebase.
 
-let firebaseConfig = {
-    apiKey: "AIzaSyBQFFsMI9untRzl1kJNbhoEM8U1rzc3Xvk",
-    authDomain: "uniq-b59e7.firebaseapp.com",
-    databaseURL: "https://uniq-b59e7.firebaseio.com",
-    projectId: "uniq-b59e7",
-    storageBucket: "uniq-b59e7.appspot.com",
-    messagingSenderId: "293321413714"
-};
+let firebaseConfig = require('./firebaseConfig');
 
 firebase.initializeApp(firebaseConfig);
 

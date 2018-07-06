@@ -1,1 +1,7 @@
 
+.dropdown-toggle:after {
+    text-align: right;
+    float: right;
+    line-height: 1.5;
+}
+
