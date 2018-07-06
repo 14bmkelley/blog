@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link type="text/css" rel="stylesheet" href="/libs/bootstrap/bootstrap.min.css" />
+    <link type="text/css" rel="stylesheet" href="/assets/root.css" />
+
+    <% if (typeof styles != 'undefined') { %>
+        <% for (var i = 0; i < styles.length; i++) { %>
+            <% var link = '/assets/' + styles[i] %>
+            <link type="text/css" rel="stylesheet" href=<%= link %> />
+        <% } %>
+    <% } %>
+
+</head>
+
+<body class="row" style="overflow-x: hidden;">
+
+    <div class="container-fluid">
+
+        <% include nav %>
+
+        <% include authmodal %>
+
+        <% if (typeof content != 'undefined') { %>
+            <div class="container">
+                <%- include(content) %>
+            </div>
+        <% } %>
+
+    </div>
+
+    <script src="/libs/jquery/jquery.min.js"></script>
+    <script src="/libs/bootstrap/bootstrap.min.js"></script>
+    <script src="/assets/root.js"></script>
+
+    <% if (typeof scripts != 'undefined') { %>
+        <% for (var i = 0; i < scripts.length; i++) { %>
+            <% var link = '/assets/' + scripts[i] %>
+            <script src=<%= link %>></script>
+        <% } %>
+    <% } %>
+
+</body>
+
+</html>
